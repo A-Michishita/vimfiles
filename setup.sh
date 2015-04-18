@@ -1,5 +1,5 @@
 #! /bin/bash
-ln -sf ~/dotfiles/vimrc ~/.vimrc
+ln -sf ~/akito_s_vim/vimrc ~/.vimrc
 
 mkdir -p ~/.vim
-ln -sf ~/dotfiles/vim/bundle ~/.vim/bundle
+ln -sf ~/akito_s_vim/vim/bundle ~/.vim/bundle

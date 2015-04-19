@@ -28,4 +28,13 @@ set t_Co=256
 syntax on
 colorscheme jellybeans
 
+" ツリー状のファイル表示機能を提供します
 NeoBundle 'scrooloose/nerdtree'
+
+" タブの設定を変更します
+set tabstop=2
+" タブを挿入するときの幅
+set shiftwidth=2
+" タブをタブとして扱う(スペースに展開しない)
+set noexpandtab 
+set softtabstop=0

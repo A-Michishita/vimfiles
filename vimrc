@@ -41,3 +41,7 @@ set softtabstop=0
 
 " 行番号表示
 set number
+
+" Rails向けのコマンドを提供する
+NeoBundle 'tpope/vim-rails'
+

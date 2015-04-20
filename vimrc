@@ -44,4 +44,5 @@ set number
 
 " Rails向けのコマンドを提供する
 NeoBundle 'tpope/vim-rails'
-
+" Ruby向けにendを自動挿入してくれる
+NeoBundle 'tpope/vim-endwise'

@@ -38,3 +38,6 @@ set shiftwidth=2
 " タブをタブとして扱う(スペースに展開しない)
 set noexpandtab 
 set softtabstop=0
+
+" 行番号表示
+set number

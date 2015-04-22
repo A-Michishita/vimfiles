@@ -46,3 +46,6 @@ set number
 NeoBundle 'tpope/vim-rails'
 " Ruby向けにendを自動挿入してくれる
 NeoBundle 'tpope/vim-endwise'
+
+"選択範囲をまとめてコメントアウト"
+NeoBundle 'tomtom/tcomment_vim'

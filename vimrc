@@ -16,31 +16,10 @@ let g:neobundle_default_git_protocol='https'
 
 " neobundle#begin - neobundle#end の間に導入するプラグインを記載します。
 NeoBundleFetch 'Shougo/neobundle.vim'
-" ↓こんな感じが基本の書き方
 NeoBundle 'nanotech/jellybeans.vim'
-
-" vimrc に記述されたプラグインでインストールされていないものがないかチェックする
-NeoBundleCheck
-call neobundle#end()
-filetype plugin indent on
-" どうせだから jellybeans カラースキーマを使ってみましょう
-set t_Co=256
-syntax on
-colorscheme jellybeans
 
 " ツリー状のファイル表示機能を提供します
 NeoBundle 'scrooloose/nerdtree'
-
-" タブの設定を変更します
-set tabstop=2
-" タブを挿入するときの幅
-set shiftwidth=2
-" タブをタブとして扱う(スペースに展開しない)
-set noexpandtab 
-set softtabstop=0
-
-" 行番号表示
-set number
 
 " Rails向けのコマンドを提供する
 NeoBundle 'tpope/vim-rails'
@@ -49,3 +28,26 @@ NeoBundle 'tpope/vim-endwise'
 
 "選択範囲をまとめてコメントアウト"
 NeoBundle 'tomtom/tcomment_vim'
+
+"markdown環境の整備"
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
+
+" vimrc に記述されたプラグインでインストールされていないものがないかチェックする
+NeoBundleCheck
+call neobundle#end()
+
+filetype plugin indent on
+set t_Co=256
+syntax on
+colorscheme jellybeans
+" タブの設定を変更します
+set tabstop=2
+" タブを挿入するときの幅
+set shiftwidth=2
+" タブをタブとして扱う(スペースに展開しない)
+set noexpandtab 
+set softtabstop=0
+" 行番号表示
+set number

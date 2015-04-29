@@ -51,3 +51,4 @@ set noexpandtab
 set softtabstop=0
 " 行番号表示
 set number
+au BufRead,BufNewFile *.md set filetype=markdown

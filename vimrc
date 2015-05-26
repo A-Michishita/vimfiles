@@ -34,6 +34,9 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 
+"JSON環境の整備
+NeoBundle 'JSON.vim'
+
 " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
 NeoBundleCheck
 call neobundle#end()
@@ -51,4 +54,16 @@ set expandtab
 set autoindent
 " 行番号表示
 set number
+" markdownのシンタックス追加
 au BufRead,BufNewFile *.md set filetype=markdown
+autocmd Filetype json setl conceallevel=0
+au! BufRead,BufNewFile *.json set filetype=json
+command! -nargs=? Jq call s:Jq(<f-args>)
+function! s:Jq(...)
+  if 0 == a:0
+    let l:arg = "."
+  else
+    let l:arg = a:1
+  endif
+  execute "%! jq 95fe1a73-e2e2-4737-bea1-a44257c50fc8quot;" . l:arg . "95fe1a73-e2e2-4737-bea1-a44257c50fc8quot;"
+endfunction

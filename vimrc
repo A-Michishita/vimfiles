@@ -1,4 +1,7 @@
 set backspace=indent,eol,start
+"インデントで折りたたみ
+set foldcolumn=2
+set foldmethod=indent
 " neobundle settings {{{
 if has('vim_starting')
   set nocompatible

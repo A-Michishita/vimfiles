@@ -40,6 +40,14 @@ NeoBundle 'tyru/open-browser.vim'
 "JSON環境の整備
 NeoBundle 'JSON.vim'
 
+"HTML/CSS環境整備
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'open-browser.vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'kchmck/vim-coffee-script'
+
 " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
 NeoBundleCheck
 call neobundle#end()

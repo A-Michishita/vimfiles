@@ -36,6 +36,10 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
+augroup PrevimSettings
+  autocmd!
+  autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
 
 "JSON環境の整備
 NeoBundle 'JSON.vim'
@@ -65,6 +69,9 @@ set expandtab
 set autoindent
 " 行番号表示
 set number
+" 文字コードの自動認識
+set encoding=utf-8
+set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
 " markdownのシンタックス追加
 au BufRead,BufNewFile *.md set filetype=markdown
 autocmd Filetype json setl conceallevel=0

@@ -71,7 +71,7 @@ set autoindent
 set number
 " 文字コードの自動認識
 set encoding=utf-8
-set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
+set fileencodings=utf-8
 " markdownのシンタックス追加
 au BufRead,BufNewFile *.md set filetype=markdown
 autocmd Filetype json setl conceallevel=0

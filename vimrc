@@ -46,10 +46,11 @@ NeoBundle 'JSON.vim'
 
 "HTML/CSS環境整備
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'open-browser.vim'
+NeoBundle 'tpope/vim-surround'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'kchmck/vim-coffee-script'
 
 " vimrc に記述されたプラグインでインストールされていないものがないかチェックする

@@ -1,87 +1,12 @@
+set termencoding=utf-8
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,cp932,sjis,utf-8
+set fileformats=unix,dos,mac
 set backspace=indent,eol,start
-"インデントで折りたたみ
+set number
+set tabstop=2
+set autoindent
+set expandtab
+set shiftwidth=2
 set foldcolumn=2
 set foldmethod=indent
-" neobundle settings {{{
-if has('vim_starting')
-  set nocompatible
-  " neobundle をインストールしていない場合は自動インストール
-  if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
-    echo "install neobundle..."
-    " vim からコマンド呼び出しているだけ neobundle.vim のクローン
-    :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
-  endif
-  " runtimepath の追加は必須
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-call neobundle#begin(expand('~/.vim/bundle'))
-let g:neobundle_default_git_protocol='https'
-
-" neobundle#begin - neobundle#end の間に導入するプラグインを記載します。
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'nanotech/jellybeans.vim'
-
-" ツリー状のファイル表示機能を提供します
-NeoBundle 'scrooloose/nerdtree'
-
-" Rails向けのコマンドを提供する
-NeoBundle 'tpope/vim-rails'
-" Ruby向けにendを自動挿入してくれる
-NeoBundle 'tpope/vim-endwise'
-
-"選択範囲をまとめてコメントアウト"
-NeoBundle 'tomtom/tcomment_vim'
-
-"markdown環境の整備"
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'kannokanno/previm'
-NeoBundle 'tyru/open-browser.vim'
-augroup PrevimSettings
-  autocmd!
-  autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-augroup END
-
-"JSON環境の整備
-NeoBundle 'JSON.vim'
-
-"HTML/CSS環境整備
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'open-browser.vim'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'taichouchou2/html5.vim'
-NeoBundle 'kchmck/vim-coffee-script'
-
-" vimrc に記述されたプラグインでインストールされていないものがないかチェックする
-NeoBundleCheck
-call neobundle#end()
-
-filetype plugin indent on
-set t_Co=256
-syntax on
-colorscheme jellybeans
-" タブの設定を変更します
-set tabstop=2
-" タブを挿入するときの幅
-set shiftwidth=2
-" タブをスペースとして扱う
-set expandtab 
-set autoindent
-" 行番号表示
-set number
-" 文字コードの自動認識
-set encoding=utf-8
-set fileencodings=utf-8
-" markdownのシンタックス追加
-au BufRead,BufNewFile *.md set filetype=markdown
-autocmd Filetype json setl conceallevel=0
-au! BufRead,BufNewFile *.json set filetype=json
-command! -nargs=? Jq call s:Jq(<f-args>)
-function! s:Jq(...)
-  if 0 == a:0
-    let l:arg = "."
-  else
-    let l:arg = a:1
-  endif
-  execute "%! jq 95fe1a73-e2e2-4737-bea1-a44257c50fc8quot;" . l:arg . "95fe1a73-e2e2-4737-bea1-a44257c50fc8quot;"
-endfunction

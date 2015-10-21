@@ -29,19 +29,19 @@ NeoBundle 'tpope/vim-rails'
 " Ruby向けにendを自動挿入してくれる
 NeoBundle 'tpope/vim-endwise'
 
-"選択範囲をまとめてコメントアウト"
+" 選択範囲をまとめてコメントアウト"
 NeoBundle 'tomtom/tcomment_vim'
 
-"markdown環境の整備"
+" markdown環境の整備"
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 augroup PrevimSettings
-  autocmd!
-  autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+autocmd!
+autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
 
-"JSON環境の整備
+" JSON環境の整備
 NeoBundle 'JSON.vim'
 
 "HTML/CSS環境整備
@@ -73,16 +73,10 @@ set number
 " 文字コードの自動認識
 set encoding=utf-8
 set fileencodings=utf-8
-" markdownのシンタックス追加
 au BufRead,BufNewFile *.md set filetype=markdown
-autocmd Filetype json setl conceallevel=0
+au! BufRead,BufNewFile *.ejs set filetype=html
 au! BufRead,BufNewFile *.json set filetype=json
-command! -nargs=? Jq call s:Jq(<f-args>)
-function! s:Jq(...)
-  if 0 == a:0
-    let l:arg = "."
-  else
-    let l:arg = a:1
-  endif
-  execute "%! jq 95fe1a73-e2e2-4737-bea1-a44257c50fc8quot;" . l:arg . "95fe1a73-e2e2-4737-bea1-a44257c50fc8quot;"
-endfunction
+autocmd Filetype json setl conceallevel=0
+let g:user_emmet_settings = {
+\   'lang' : 'ja'
+\ }

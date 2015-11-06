@@ -1,3 +1,5 @@
+set encoding=utf-8
+set fileencodings=euc-jp,iso-2022-jp,cp932,sjis,utf-8
 set backspace=indent,eol,start
 "インデントで折りたたみ
 set foldcolumn=2
@@ -69,9 +71,6 @@ set expandtab
 set autoindent
 " 行番号表示
 set number
-" 文字コードの自動認識
-set encoding=utf-8
-set fileencodings=utf-8
 " markdownのシンタックス追加
 au BufRead,BufNewFile *.md set filetype=markdown
 autocmd Filetype json setl conceallevel=0

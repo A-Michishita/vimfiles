@@ -55,6 +55,9 @@ NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'kchmck/vim-coffee-script'
 
+"Git環境整備
+NeoBundle 'tpope/vim-fugitive'
+
 " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
 NeoBundleCheck
 call neobundle#end()

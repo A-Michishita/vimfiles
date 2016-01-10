@@ -54,10 +54,10 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'sudo.vim'
 
 "Git環境整備
 NeoBundle 'tpope/vim-fugitive'
-
 " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
 NeoBundleCheck
 call neobundle#end()

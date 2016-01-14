@@ -25,7 +25,6 @@ NeoBundle 'nanotech/jellybeans.vim'
 
 " ツリー状のファイル表示機能を提供します
 NeoBundle 'scrooloose/nerdtree'
-
 " Rails向けのコマンドを提供する
 NeoBundle 'tpope/vim-rails'
 " Ruby向けにendを自動挿入してくれる
@@ -83,3 +82,4 @@ autocmd Filetype json setl conceallevel=0
 let g:user_emmet_settings = {
 \   'lang' : 'ja'
 \ }
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
